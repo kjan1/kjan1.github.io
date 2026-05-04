@@ -1,0 +1,196 @@
+/* =====================
+   CSS VARIABLES
+   ===================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-surface: #f4f6f9;
+  --color-border: #e2e8f0;
+  --font-heading: 'Georgia', serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --max-width: 960px;
+  --radius: 8px;
+}
+
+/* =====================
+   RESET & BASE
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* =====================
+   LAYOUT
+   ===================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+/* =====================
+   HEADER & NAV
+   ===================== */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #fff;
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+/* =====================
+   BUTTON
+   ===================== */
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--color-accent);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background-color: #e0eaff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* =====================
+   HEADINGS
+   ===================== */
+h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+/* =====================
+   FEATURE CARDS
+   ===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  background-color: var(--color-text);
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+}

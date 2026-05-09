@@ -1,19 +1,41 @@
+<!-- The index.html file is the main website file. It controls the stucture and contents 
+ on the web page itself. Though you can technically include styling in this file as well, 
+ it is generally frowned upon as that is usually contained in the css file 
+ (though for this project either is fine) 
+ Some things you would typically include in the html file are: headers, paragraphs, buttons, images, links -->
+
+<!-- READING THE FILE
+ First - if your IDE does not color code the html file, download the "HTML" extension for your IDE. 
+ This will make it easier to read and edit the file. For example, tags (h1>, <p>, <a>, etc.) will be colored 
+ differently than text, making it easier to identify the structure of the file.
+ A tag will begin with a < and end with a >. The text between the < and > is the name of the tag, 
+ which indicates what type of element it is (e.g., h1 for header, p for paragraph, a for link). HTML is cool
+ in that it will automatically format the text based on the tag. For example, text within an h1 
+ tag will be larger and bolder than text within a p tag, so it does some styling by default! If you
+ want to change the default styling, you can do so in the css file.
+
+-->
+
+ <!-- This is the website's documentation information. You can ignore most of this -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Project</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My Project</title> <!-- This does not appear on the website itself but is rather the name of the tab when you open the site -->
+  <link rel="stylesheet" href="style.css" /> <!-- This is the link to the css (styling) file. If for some reason you change the name of the css file update that here -->
 </head>
 
+<!-- An ending tag will have a / before its name. The </head> tag above shows that the "head" section has ended
+ and the <body> tag below shows that the "body" section has started -->
 <body>
 
   <!-- HEADER / NAV -->
-  <header>
-    <div class="container">
-      <a href="#" class="logo">MyProject</a>
-      <nav>
+  <header> <!-- This tells the file to make this section the header section of the website. It typically contains the logo and navigation links -->
+    <div class="container"> <!-- This is a div (division) tag, which is used to group elements together. It does not do anything style wise by default, its just useful for referencing in the css file (like if you want to change the font of the header but not other things)-->
+      <a href="#" class="logo">MyProject</a> <!-- This is a link tag that serves as the logo. (You can also see its class is "logo", again which doesnt do anything.) The href="#" means that when you click on the logo, it will take you to the top of the page. You can change this to a different link if you want (e.g., if you have a homepage or something) -->
+      <nav> 
+        <!-- more a tags (which means they are by default clickable links). Change the href if you change them below so they stay correctly linked -->
         <a href="#vision">Vision Statement</a>
         <a href="#about">About</a>
         <a href="#features">Features</a>
@@ -25,8 +47,8 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h1>Church and Political Polarization</h1>
-      <p>An Agent-Based Modeling Approach</p>
+      <h1>Church and Political Polarization</h1> <!-- a header (<h1>) tag. This is the largest header tag, there are also h2, h3, etc. which are smaller and smaller headers -->
+      <p>An Agent-Based Modeling Approach</p> <!-- a paragraph (<p>) tag. This is normal text -->
       <a href="#about" class="btn">ButtonEx</a>
     </div>
   </section>

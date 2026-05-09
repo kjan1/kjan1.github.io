@@ -1,7 +1,19 @@
 /* =====================
    CSS VARIABLES
    ===================== */
-:root {
+   /* This is the CSS file which is responsible for the styling of the website. 
+   This includes all the color, font, and layout variables. 
+   A section will be titled based on what parts of the html it applies to. For example, 
+   below you can see a "body" and and "a" sections. In the html, there are tags labeled <body> and <a> for example. Anything in
+   those sections will be applied to all body sections and all link sections (unless overridden somewhere else in the document.)
+   There are also some titles with dots (.) before their names such as .container and .logo. These refer to classes in the html. 
+   If you read the comments in that file, you might remember me mentioning how these are used in the css file for styling. 
+   For example, a <a> (link) tag may have an extra class associated with it (<a class="SpecialClass" href=...>. 
+   If you wanted to style that specific link, you could reference its class without changing other links that dont have the same class.
+   Otherwise for all links you can just change the "a" section.*/
+  
+   /* You can think of everything in root as global variables - available throughout the document in other sections */
+:root { 
   --color-bg: #ffffff;
   --color-text: #1a1a1a;
   --color-muted: #666666;
@@ -18,7 +30,7 @@
 /* =====================
    RESET & BASE
    ===================== */
-*, *::before, *::after {
+*, *::before, *::after { /* ngl i dont remember learning this*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+/* This is the styling for when you hover over a link (a tag). The : denotes that the style occurs on an element 
+when its in a certain case. In this case, an "a" tag gets a different state when it is hovered over by the mouse 
+(you probably have noticed webpages doing this when you hover over links, they often get darker or underlined which 
+helps tell the user they can click on them) */
 a:hover {
   color: var(--color-accent-hover);
   text-decoration: underline;

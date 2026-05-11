@@ -33,12 +33,12 @@
   <!-- HEADER / NAV -->
   <header> <!-- This tells the file to make this section the header section of the website. It typically contains the logo and navigation links -->
     <div class="container"> <!-- This is a div (division) tag, which is used to group elements together. It does not do anything style wise by default, its just useful for referencing in the css file (like if you want to change the font of the header but not other things)-->
-      <a href="#" class="logo">MyProject</a> <!-- This is a link tag that serves as the logo. (You can also see its class is "logo", again which doesnt do anything.) The href="#" means that when you click on the logo, it will take you to the top of the page. You can change this to a different link if you want (e.g., if you have a homepage or something) -->
+      <a href="#" class="logo">CS398</a> <!-- This is a link tag that serves as the logo. (You can also see its class is "logo", again which doesnt do anything.) The href="#" means that when you click on the logo, it will take you to the top of the page. You can change this to a different link if you want (e.g., if you have a homepage or something) -->
       <nav> 
         <!-- more a tags (which means they are by default clickable links). Change the href if you change them below so they stay correctly linked -->
         <a href="#vision">Vision Statement</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
+        <a href="#team">Our Team</a>
+        <a href="#features">Downloadables</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -48,8 +48,8 @@
   <section class="hero">
     <div class="container">
       <h1>Church and Political Polarization</h1> <!-- a header (<h1>) tag. This is the largest header tag, there are also h2, h3, etc. which are smaller and smaller headers -->
-      <p>An Agent-Based Modeling Approach</p> <!-- a paragraph (<p>) tag. This is normal text -->
-      <a href="#about" class="btn">ButtonEx</a>
+      <h3>An Agent-Based Modeling Approach</h3>
+      <!-- <p>An Agent-Based Modeling Approach</p> -- a paragraph (<p>) tag. This is normal text -->
     </div>
   </section>
 
@@ -82,45 +82,74 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- OUR TEAM -->
+  <section id="team" class="team">
     <div class="container">
-      <h2>About</h2>
-      <p>Description</p>
+      <h2>Our Team</h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="images/katelin.jpg" alt="Katelin Jandris" class="team-photo" />
+          <h3>Katelyn Jandris</h3>
+          <p>Computer Science with Honors</p>
+        </div>
+
+        <div class="card">
+          <img src="images/ryan.jpeg" alt="Ryan Klein" class="team-photo" />
+          <h3>Ryan Klein</h3>
+          <p>Data Science and Political Science</p>
+        </div>
+
+        <div class="card">
+          <img src="images/ovgu.jpg" alt="Övgü Tufan" class="team-photo" />
+          <h3>Övgü Tufan</h3>
+          <p>Computer Science</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FEATURES -->
   <section id="features" class="features">
     <div class="container">
-      <h2>Features</h2>
+      <h2>Downloadables</h2>
 
       <div class="cards">
         <div class="card">
-          <h3>Sub Header 1</h3>
-          <p>Description</p>
+          <a href="Download materials/Senior Project Presentation.pdf" target="_blank">
+            <h3>Presentation Slides</h3>
+            <p>View or download our presentation slides.</p>
+          </a>
         </div>
 
         <div class="card">
-          <h3>Sub Header 2</h3>
-          <p>Description</p>
+          <a href="Download materials/Polarization_Model.nlogox" target="_blank">
+            <h3>Model Code</h3>
+            <p>Download and try our code.</p>
+          </a>
         </div>
 
         <div class="card">
-          <h3>Sub Header 3</h3>
-          <p>Description</p>
+          <a href="Download materials/Senior Project Final Report.pdf" target="_blank">
+            <h3>Final Report</h3>
+            <p>Read or download the final report.</p>
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
       <p>
-        Website:
-        <a href="https://website.com" target="_blank">website.com</a>
+        Links:
+      </p>
+      <p>
+        <a href="https://calvin.edu/academics/school-stem/computer-science" target="_blank">Calvin University - Computer Science</a>
       </p>
     </div>
   </section>
@@ -134,3 +163,4 @@
 
 </body>
 </html>
+
